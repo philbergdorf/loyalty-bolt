@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Alert, TouchableOpacity, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Alert, TouchableOpacity, Text, View, Platform } from 'react-native';
 import { useState, useCallback } from 'react';
 import Header from '@/components/Header';
 import PointsCard from '@/components/PointsCard';
@@ -197,6 +197,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   content: {
-    paddingBottom: 24,
+    paddingBottom: Platform.select({
+      ios: 120, // Account for tab bar height (85) + safe area bottom inset + extra padding
+      android: 110, // Account for tab bar height (85) + extra padding
+      default: 110,
+    }),
   },
 });
