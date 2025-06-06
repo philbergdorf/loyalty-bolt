@@ -30,7 +30,6 @@
     "plugins": [
       "expo-router"
     ],
-    "scheme": "myapp",
-    "newArchEnabled": true
+    "scheme": "myapp"
   }
 }
