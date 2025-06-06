@@ -10,3 +10,4 @@ The deployment is automated using GitHub Actions. On every push to the `main` br
 3. GitHub Pages serves the application from the `gh-pages` branch
 
 The application uses the `/loyalty-bolt` base path to match the GitHub Pages URL structure.
+
